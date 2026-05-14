@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it" class="dark scroll-smooth h-full">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; media-src 'self' data:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contattaci - Velocitas Glass</title>
+    <script defer src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#10b981', dark: '#050505', darker: '#000000' }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-dark text-white font-sans antialiased overflow-x-hidden selection:bg-white/20 selection:text-white flex flex-col min-h-screen">
+    
+    <script defer src="js/components.js"></script>
+
+    <main class="pt-32 flex-1 pb-24">
+        <section class="relative z-10">
+            <div class="max-w-4xl mx-auto px-6">
+                
+                <h1 class="text-4xl font-bold mb-2 text-center">Inviaci un Messaggio</h1>
+                <p class="text-gray-400 mb-12 text-sm text-center">Compila il modulo sottostante, il nostro team risponderà in 24h.</p>
+                
+                <div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-[80px] pointer-events-none"></div>
+                    
+                    <!-- NOTA: Il listener JS impedisce il submit di default ed esegue la simulazione API -->
+                    <form id="contact-form" class="flex flex-col gap-6 relative z-10">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="flex flex-col gap-2">
+                                <label for="name" class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Nome Completo</label>
+                                <input type="text" id="name" required class="bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-500/50 transition-all text-white placeholder-gray-600" placeholder="Il tuo nome" maxlength="100" autocomplete="off">
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label for="email" class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Email</label>
+                                <input type="email" id="email" required class="bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-500/50 transition-all text-white placeholder-gray-600" placeholder="tua@email.com" maxlength="100" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col gap-2">
+                            <label for="order" class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Numero Ordine (Opzionale)</label>
+                            <input type="text" id="order" class="bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-500/50 transition-all text-white placeholder-gray-600" placeholder="#VG-12345" maxlength="100" autocomplete="off">
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label for="message" class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Messaggio</label>
+                            <textarea id="message" required rows="5" class="bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-500/50 transition-all text-white placeholder-gray-600 resize-none" placeholder="Come possiamo aiutarti?"></textarea>
+                        </div>
+
+                        <button type="submit" class="mt-4 bg-emerald-500 hover:bg-emerald-400 text-black py-4 rounded-xl font-bold transition-colors flex justify-center items-center gap-2">
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                            Invia Richiesta
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script defer src="js/main.js"></script>
+</body>
+</html>

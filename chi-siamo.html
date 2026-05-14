@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="it" class="dark scroll-smooth h-full">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; media-src 'self' data:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Nostra Storia - Velocitas Glass</title>
+    <script defer src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#10b981', dark: '#050505', darker: '#000000' }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-dark text-white font-sans antialiased overflow-x-hidden selection:bg-white/20 selection:text-white flex flex-col min-h-screen">
+    
+    <script defer src="js/components.js"></script>
+
+    <main class="pt-32 pb-24 flex-1">
+        <div class="max-w-4xl mx-auto px-6">
+            <h1 class="text-5xl font-bold mb-6 tracking-tight text-center">La Nostra Storia.</h1>
+            <p class="text-emerald-500 text-center uppercase tracking-widest font-semibold mb-16">Oltre il tessuto. Oltre il limite.</p>
+            
+            <div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/10 relative overflow-hidden text-gray-300 text-lg leading-relaxed space-y-8">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-emerald-500 to-transparent opacity-50"></div>
+                
+                <p>
+                    <strong class="text-white">Tutto è iniziato da una frustrazione.</strong> Come giocatori competitivi, ci siamo resi conto che il collo di bottiglia per le nostre performance non era l'hardware del PC o il sensore del mouse, ma la superficie su cui il mouse scorreva.
+                </p>
+                <p>
+                    I classici tappetini in tessuto si logoravano in pochi mesi, accumulavano umidità, perdevano scorrevolezza nelle zone centrali e rendevano i micro-aggiustamenti inconsistenti. Il mercato offriva solo variazioni dello stesso materiale obsoleto.
+                </p>
+                
+                <div class="border-l-4 border-emerald-500 pl-6 my-10 py-2">
+                    <h3 class="text-2xl font-bold text-white mb-2">L'Era del Vetro Silicato</h3>
+                    <p class="text-gray-400 text-base">Abbiamo passato due anni in ricerca e sviluppo. Volevamo una superficie che offrisse zero attrito iniziale per i flick shot, ma una frenata chirurgica per il tracking. La risposta l'abbiamo trovata nel <strong class="text-white">Vetro Temperato Silicato</strong>, trattato con un processo di incisione micrometeorica.</p>
+                </div>
+
+                <p>
+                    Oggi, <strong class="text-white">Velocitas Glass</strong> non è solo un brand, ma il nuovo standard per l'Esports ad altissimi livelli. I nostri mousepad non si logorano, non temono il sudore, e garantiscono la stessa, identica scivolata dal giorno 1 al giorno 1000.
+                </p>
+
+                <p>
+                    In combinazione con le nostre Gaming Sleeves a compressione, abbiamo creato l'ecosistema definitivo per l'atleta digitale. Nessun compromesso. Solo pura, inarrestabile precisione.
+                </p>
+                
+                <div class="mt-12 text-center">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Team Velocitas" class="w-full h-64 object-cover rounded-2xl border border-white/10 opacity-70 mb-6 grayscale hover:grayscale-0 transition-all duration-500">
+                    <p class="text-sm font-semibold tracking-widest uppercase text-gray-500">- Il Team Velocitas</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="js/main.js"></script>
+</body>
+</html>

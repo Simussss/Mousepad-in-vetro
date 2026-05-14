@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="it" class="dark scroll-smooth h-full">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; media-src 'self' data:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocitas Gaming Sleeve - V-Tech Two - Velocitas Glass</title>
+    <script defer src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#10b981', dark: '#050505', darker: '#000000' }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-dark text-white font-sans antialiased overflow-x-hidden selection:bg-white/20 selection:text-white flex flex-col min-h-screen">
+    
+    <script defer src="js/components.js"></script>
+
+    <main class="pt-32 pb-24 flex-1">
+        <div class="max-w-7xl mx-auto px-6">
+            <a href="catalogo.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-emerald-500 transition-colors mb-8 text-sm font-semibold uppercase tracking-widest">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Torna al Catalogo
+            </a>
+
+            <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- Immagine Prodotto -->
+                <div class="glass-panel p-2 rounded-3xl border border-white/10 relative group">
+                    <div class="aspect-square rounded-2xl bg-black overflow-hidden relative border border-white/5 shadow-2xl">
+                        <img src="assets/images/prod_v_tech_two.jpg" alt="V-Tech Two" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 mix-blend-luminosity hover:mix-blend-normal">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                </div>
+
+                <!-- Dettagli Prodotto -->
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-2 text-emerald-500 text-xs font-bold uppercase tracking-widest border border-emerald-500/30 px-3 py-1 rounded-full w-max bg-emerald-500/10">
+                        <i data-lucide="check-circle" class="w-4 h-4"></i> Disponibile Immediatamente
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white drop-shadow-md">Velocitas Gaming Sleeve - V-Tech Two</h1>
+                    <p class="text-3xl font-light text-white mb-4 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">€29.99</p>
+                    
+                    <div class="text-gray-400 leading-relaxed text-lg mb-6 border-l-2 border-emerald-500/50 pl-4">
+                        Il top di gamma per le maniche da gaming. Rivestimento in teflon sul polso.
+                    </div>
+
+                    <div class="border-t border-white/10 pt-6 mt-2">
+                        <h3 class="text-sm font-bold mb-4 uppercase tracking-widest text-white flex items-center gap-2">
+                            <i data-lucide="settings" class="w-4 h-4 text-emerald-500"></i> Specifiche Tecniche
+                        </h3>
+                        <ul class="space-y-3 text-gray-400 text-sm">
+                            <li><i data-lucide="zap" class="w-4 h-4 inline mr-2 text-emerald-500"></i> Compatibilità sensore: 100% Optical/Laser
+- Manutenzione: Lavabile in 5 secondi
+- Durabilità: Lifetime (nessun degrado superficiale)
+- Condizioni: Reso garantito entro 14 giorni</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 flex gap-4">
+                        <button data-name="V-Tech Two" data-price="29.99" data-img="assets/images/prod_v_tech_two.jpg" class="add-to-cart flex-1 bg-emerald-500 hover:bg-emerald-400 text-black py-4 rounded-xl font-bold text-lg transition-colors flex justify-center items-center gap-3 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:scale-[1.02] transform duration-200">
+                            <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+                            Aggiungi al Carrello
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="js/main.js"></script>
+</body>
+</html>

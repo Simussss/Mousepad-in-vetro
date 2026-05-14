@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it" class="dark scroll-smooth h-full">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; media-src 'self' data:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocitas Glass - Account</title>
+    <script defer src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#10b981', dark: '#050505', darker: '#000000' }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-dark text-white font-sans antialiased overflow-x-hidden selection:bg-white/20 selection:text-white flex flex-col min-h-screen">
+    
+    <script defer src="js/components.js"></script>
+
+    <main class="flex-1 pt-32 pb-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Area Cliente</h1>
+                <p class="text-gray-400 text-lg font-light">Accedi per gestire i tuoi ordini o crea un nuovo account Velocitas.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
+                <!-- Login Form -->
+                <div class="glass-panel p-10 rounded-3xl border border-white/10 relative overflow-hidden group">
+                    <div class="absolute -inset-1 bg-gradient-to-br from-emerald-500/20 to-transparent blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-8">
+                            <i data-lucide="log-in" class="w-8 h-8 text-emerald-500"></i>
+                            <h2 class="text-2xl font-bold uppercase tracking-widest">Accedi</h2>
+                        </div>
+                        <form class="flex flex-col gap-6" onsubmit="event.preventDefault(); alert('Login effettuato!');">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs uppercase tracking-widest text-gray-400 font-bold">Email</label>
+                                <input type="email" required placeholder="tu@email.com" class="bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-500/50 text-white placeholder-gray-600 transition-colors" maxlength="100" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex justify-between">
+                                    <label class="text-xs uppercase tracking-widest text-gray-400 font-bold">Password</label>
+                                    <a href="#" class="text-xs text-emerald-500 hover:text-emerald-400 transition-colors">Password dimenticata?</a>
+                                </div>
+                                <input type="password" required placeholder="••••••••" class="bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-500/50 text-white placeholder-gray-600 transition-colors" maxlength="100" autocomplete="off">
+                            </div>
+                            <button type="submit" class="mt-4 bg-white hover:bg-gray-200 text-black font-bold py-4 rounded-xl text-lg transition-colors flex justify-center items-center gap-2">
+                                Entra <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Registration Form -->
+                <div class="glass-panel p-10 rounded-3xl border border-white/10 relative overflow-hidden group">
+                    <div class="absolute -inset-1 bg-gradient-to-bl from-emerald-500/20 to-transparent blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-8">
+                            <i data-lucide="user-plus" class="w-8 h-8 text-emerald-500"></i>
+                            <h2 class="text-2xl font-bold uppercase tracking-widest">Registrati</h2>
+                        </div>
+                        <form class="flex flex-col gap-6" onsubmit="event.preventDefault(); alert('Registrazione completata!');">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-xs uppercase tracking-widest text-gray-400 font-bold">Nome</label>
+                                    <input type="text" required placeholder="Mario" class="bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-500/50 text-white placeholder-gray-600 transition-colors" maxlength="100" autocomplete="off">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-xs uppercase tracking-widest text-gray-400 font-bold">Cognome</label>
+                                    <input type="text" required placeholder="Rossi" class="bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-500/50 text-white placeholder-gray-600 transition-colors" maxlength="100" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs uppercase tracking-widest text-gray-400 font-bold">Email</label>
+                                <input type="email" required placeholder="tu@email.com" class="bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-500/50 text-white placeholder-gray-600 transition-colors" maxlength="100" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs uppercase tracking-widest text-gray-400 font-bold">Password</label>
+                                <input type="password" required placeholder="Crea una password forte" class="bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-500/50 text-white placeholder-gray-600 transition-colors" maxlength="100" autocomplete="off">
+                            </div>
+                            <button type="submit" class="mt-4 bg-emerald-500 hover:bg-emerald-400 text-black font-bold py-4 rounded-xl text-lg transition-colors flex justify-center items-center gap-2 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:scale-[1.02] transform duration-200">
+                                Crea Account <i data-lucide="check" class="w-5 h-5"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="js/main.js"></script>
+</body>
+</html>
