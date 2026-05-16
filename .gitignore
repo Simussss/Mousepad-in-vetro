@@ -1,7 +1,53 @@
-Since the only file change is the addition of `.gitignore` itself and there are no other file changes provided in the list, there's no specific content to analyze for generating ignore rules. However, I notice that the change list doesn't contain any actual source code files, build artifacts, or other meaningful files that would inform gitignore generation.
+# Examples 1:
 
-Based on the rule that if the change list contains only source or config files and no build artifacts, dependencies, or temp files, then output nothing - but since the only change is adding the .gitignore file itself, this is likely a case where we're initializing a repository without clear project context.
+    Input:
+    ### Added files:
+    [src/main.py, README.md, config.json]
 
-However, since there are no actual project files listed that would indicate what type of project this is or what should be ignored, the appropriate response per the rules is:
+    ### Deleted files:
+    [old/unused.py]
+    ### Modified files:
+    [utils.py]
+    ###current .gitignore Content
+    (empty)
+    Expected Output:
+    (empty — output nothing)
 
-(empty - output nothing)
+# Example 2 (Project with artifacts):
+Input:
+### Added files:
+[pycache/main.cpython-310.pyc, dist/app.js, .env.local, .vscode/settings.json
+
+### Deleted files:
+    []
+
+### Modified files:
+[]
+### current .gitignore Content
+*.log
+Expected Output:
+    #Compiled and build artifacts
+    *.pyc
+    pycache/
+    *.o
+    *.obj
+    dist/
+    build/
+    #Dependencies
+    .venv/
+    venv/
+    node_modules/
+    #Logs and temp files
+    *.log
+    *.tmp
+    *.swp
+    #Environment
+    .env
+    .env.local
+    .env.
+    #Editors
+    .vscode/
+    .idea/
+    #Original rules preserved
+    *.log
+Final reminder: Output ONLY the .gitignore content. If nothing should be ignored, output NOTHING.
